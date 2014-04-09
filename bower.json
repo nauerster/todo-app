@@ -1,0 +1,24 @@
+{
+  "name": "Todo-App",
+  "version": "0.1.0",
+  "authors": [
+  ],
+  "description": "A slammin' ui",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-resource": "~1.2.15",
+    "angular": "~1.2.15",
+    "angular-ui-router": "https://github.com/angular-ui/ui-router.git#~0.2.10",
+    "ui-bootstrap": "~0.10.0",
+    "bootstrap": "~3.1.1",
+    "fontawesome": "~4.0.3"
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="todoList">
+<head>
+<title>ToDo List</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta charset="UTF-8" />
+<meta name="description" content="#" />
+<meta name="keywords" content="#" />
+<meta name="author" content="Eric Knauer" />
+
+<!-- css includes -->
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->	
+</head>
+
+	<body>
+
+	<div class="todoContainer" ng-controller="todoCtrl">
+		
+			<div class="header">
+				<h2>Todo List</h2>
+				<form ng-submit="addTodo()">
+					<input class="addToInput" type="text" ng-model="todoText" placeholder="add new todo here">
+					<input class="addToBtn" type="submit" value="add">
+				</form>
+				<p id="alert">Whoops! You didn't actually enter anything.</p>
+				
+				<div id="remaining">{{remaining()}} items remain</div>
+				<button id="clearStorage">Clear Local Storage</button>
+			</div><!-- /header -->
+	
+			<div id="leftCol">
+				<ul id="todoList">
+					<li ng-repeat="todo in todos">
+							<label class="newCheckBox">
+								<input type="checkbox" ng-model="todo.done">
+								<span></span>
+							</label>
+						<p class="done-{{todo.done}}">{{todo.text}}</p>
+					</li>
+				</ul>
+				
+				<button id="removeItems" ng-click="archive()">Remove Items</button>
+			</div><!-- /leftCol -->
+			
+			
+	</div><!-- /todoContainer -->
+
+
+	<!-- js includes -->
+	<script src="js/vendor.min.js"></script>
+	<script src="js/app.min.js"></script>
+	</body>
+</html>
