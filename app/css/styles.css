@@ -1,0 +1,144 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html,
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background: #ffffff;
+}
+h1,
+h2,
+h3,
+li,
+p,
+a {
+  color: #444444;
+}
+.todoContainer {
+  width: 1056px;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  margin: 40px auto;
+}
+.todoContainer h2 {
+  font-size: 28px;
+  display: inline;
+  margin: 0px 50px 0px 0px;
+  float: left;
+}
+.header {
+  width: 100%;
+  border-bottom: solid 3px #F3F4F6;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.header form {
+  height: 32px;
+  display: inline-block;
+  border: none;
+  overflow: hidden;
+}
+.header form input {
+  height: 30px;
+  line-height: 30px;
+  border: solid 1px #DDDDDD;
+  float: left;
+}
+.header form .addToInput {
+  width: 250px;
+  text-indent: 10px;
+}
+.header form .addToBtn {
+  width: 40px;
+  margin-left: 5px;
+  background: url('../img/plus_16x16.png') no-repeat 11px 6px #f1f1f1;
+  text-indent: -9999px;
+}
+.header form .addToBtn:hover {
+  cursor: pointer;
+}
+#remaining {
+  width: 50%;
+  height: 30px;
+  line-height: 30px;
+}
+#leftCol {
+  width: 40%;
+  height: 500px;
+  border-right: solid 3px #F3F4F6;
+}
+ul {
+  width: 90%;
+  list-style: none;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+ul li {
+  line-height: 24px;
+  border-bottom: dotted 2px #F3F4F6;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+}
+ul li .newCheckBox {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  margin-right: 10px;
+  display: inline-block;
+  float: left;
+  border: solid 1px #DDDDDD;
+}
+ul li .newCheckBox input[type="checkbox"] {
+  visibility: hidden;
+}
+ul li .newCheckBox input[type="checkbox"]:checked + span {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  background: url('../img/check_16x13.png') no-repeat 0px 0px transparent;
+}
+ul li span {
+  float: left;
+}
+ul li p {
+  padding-left: 30px;
+}
+ul li .done-true {
+  text-decoration: line-through;
+  color: grey;
+}
+/* Buttons */
+button {
+  font: normal 14px/1em arial;
+  border: solid 1px #DDDDDD;
+  text-decoration: none;
+}
+button:hover {
+  cursor: pointer;
+}
+#clearStorage {
+  padding: 8px 15px 8px 30px;
+  background: url('../img/trash_stroke_16x16.png') no-repeat 8px 8px #f1f1f1;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+#removeItems {
+  padding: 8px 15px 8px 30px;
+  background: url('../img/x_14x14.png') no-repeat 8px 8px #f1f1f1;
+}
+/* Messages */
+#alert {
+  display: none;
+  position: absolute;
+  left: 175px;
+  top: 45px;
+  font-size: 12px;
+  color: red;
+}
